@@ -1,29 +1,42 @@
-# BACKUP
+# 💾 BACKUP
 
-Proyecto de respaldo y copia de seguridad.
+Proyecto de respaldo y copia de seguridad desarrollado por **Isaac Esteban Haro Torres**.
 
-## Descripción
+---
+
+## 📝 Descripción
 
 Aplicación para realizar copias de seguridad y respaldos de datos importantes.
 
-## Características
+---
+
+## ✨ Características
 
 - Copia de seguridad automática
 - Restauración de datos
 - Programación de respaldos
 
-## Stack Tecnológico
+---
+
+## 🛠️ Stack Tecnológico
 
 - Python
 - Shell scripting
 - Sistemas de archivos
 
-## Autor
+---
 
-🧑‍💻 **Isaac Haro**
+## 👨‍💻 Desarrollado por Isaac Esteban Haro Torres
 
-Ingeniero en Sistemas · Full Stack · Automatización · Data
+**Ingeniero en Sistemas · Full Stack · Automatización · Data**
 
-## Licencia
+- 📧 Email: zackharo1@gmail.com
+- 📱 WhatsApp: 098805517
+- 💻 GitHub: https://github.com/ieharo1
+- 🌐 Portafolio: https://ieharo1.github.io/portafolio-isaac.haro/
 
-MIT — contribuciones bienvenidas 🚀
+---
+
+## 📄 Licencia
+
+© 2026 Isaac Esteban Haro Torres - Todos los derechos reservados.
