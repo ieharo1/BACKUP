@@ -1,36 +1,75 @@
-﻿# BACKUP - MinIO + Backup API + Scheduler + Nginx
+﻿# Plataforma de Respaldo con Object Storage, Scheduler y API
 
-Configuracion de servidor para plataforma de respaldos con almacenamiento S3-compatible.
+Infraestructura de respaldos con almacenamiento tipo S3, ejecución periódica y exposición segura detrás de Nginx.
 
-## Arquitectura
+## Descripción
 
-- `backup-api`: endpoint para disparar respaldos.
-- `backup-scheduler`: simulacion de cron en contenedor.
-- `minio`: almacenamiento de objetos para snapshots.
-- `backup-nginx`: entrada unica para API y consola de storage.
+Este servidor simula una solución de backup empresarial combinando API operativa, tareas programadas y object storage.
 
-## Levantar
+## ¿Qué hace este proyecto?
+
+- Expone API para disparar respaldos manuales.
+- Ejecuta scheduler interno para backups periódicos.
+- Integra MinIO como almacenamiento compatible S3.
+- Centraliza accesos vía Nginx.
+
+## Características Principales
+
+| Característica | Descripción |
+|---|---|
+| API de backup | Disparo de jobs bajo demanda |
+| Scheduler continuo | Simulación de política de respaldo automática |
+| Object storage | Persistencia de artefactos en MinIO |
+| Acceso unificado | Nginx como puerta de entrada |
+
+## Stack Tecnológico
+
+- Python Flask
+- MinIO
+- Nginx
+- Docker Compose
+
+## Instalación y Uso
+
+### Levantar entorno
 
 ```bash
 docker compose up -d --build
 ```
 
-Accesos:
+### Probar
 
 - API: `http://localhost:8086/api/health`
-- Consola MinIO proxied: `http://localhost:8086/storage/`
+- Consola storage proxied: `http://localhost:8086/storage/`
 
-## Variables
+## Variables de Entorno
 
 - `NGINX_PORT`
 - `BACKUP_INTERVAL_SECONDS`
 - `MINIO_ROOT_USER`
 - `MINIO_ROOT_PASSWORD`
 
-## Valor para perfil
+## Estructura del Proyecto
 
-- Patrón de backup enterprise con object storage.
-- Diseño listo para escalar snapshots y políticas de retención.
+```text
+.
+├── Dockerfile
+├── docker-compose.yml
+├── .env
+├── backup_api/
+│   ├── app.py
+│   └── requirements.txt
+├── scripts/
+│   └── scheduler.sh
+└── nginx/
+    └── default.conf
+```
+
+## Casos de Uso
+
+- Plataforma de snapshots y resguardo documental.
+- Entornos de retención de datos por políticas internas.
+- Base para pipelines de backup/restauración empresariales.
 
 ---
 
